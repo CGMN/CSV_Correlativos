@@ -4,10 +4,10 @@ import sys  #esta y las 2 lineas siguientes permiten que trabaje con n con gorri
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-#Permite seleccionar el archivo
+#Permite seleccionar el ar chivo
 #_________________________________________________________________________
-root = Tkinter.Tk() #esto se hace solo para eliminar la ventanita de Tkinter 
-root.withdraw() #ahora se cierra 
+root = Tkinter.Tk() #esto se hace solo para eliminar la ventanita de Tkinter
+root.withdraw() #ahora se cierra
 file_path = tkFileDialog.askopenfilename() #abre el explorador de archivos y guarda la seleccion en la variable
 
 #Almacena la informacion de excel
@@ -24,8 +24,8 @@ print cabecera, "columnas analizadas"
 
 listadefilas = [] #Una lista con todas las filas
 for j in range ( 0, hoja.nrows):
-      listadefilas.append(hoja.row(j))    
-#print "largo lista de filas", len(listadefilas)
+      listadefilas.append(hoja.row(j))
+      #print "largo lista de filas", len(listadefilas)
 
 filasutiles=[]
 for q in range(0,len(listadefilas)):
@@ -90,15 +90,15 @@ for i in range(0, len(Correlativos)):
     break
 
 #ADVERTENCIAS
-#_____________________________________________________________      
+#_____________________________________________________________
 fout = open ("Correlativos.csvmsdos","w")  #
 for ii  in range (0, len (Correlativos)):
-    fout.write (Correlativos[ii]+ "\n") # + "\r\n" 
+    fout.write (Correlativos[ii]+ "\n") # + "\r\n"
 fout.close()
 
 fout = open ("Correlativos.txt","w")
 for ii  in range (0, len (Correlativos)):
-    fout.write (Correlativos[ii]+ "\n") # + "\r\n" 
+    fout.write (Correlativos[ii]+ "\n") # + "\r\n"
 fout.close()
 print""
 print "Archivo csvmsdos creado"
